@@ -1,0 +1,38 @@
+# Herkunftssprache je Eintrag (vereinfacht, Duden-Kürzel)
+L, G, F = 'lat.', 'griech.', 'franz.'
+HA = {
+ 'kon-/kom-/kol-/kor-/ko- (mit, zusammen)': L, 'pro- (vor, für)': 'lat./griech.', 'in-/im- (hinein)': L, 're- (zurück, wieder)': L,
+ 'ex-/e- (aus, heraus)': L, 'inter- (zwischen)': L, 'de-/des- (weg, ent-)': L, 'ad- (hinzu, an) inkl. ak-/ag-/as-/at-/ap-': L,
+ 'prä- (vor)': L, 'dis-/di- (auseinander)': L, 'per- (durch)': L, 'ab-/abs- (weg)': L, 'syn-/sym- (zusammen)': G,
+ 'trans- (hinüber)': L, 'kontra-/konter- (gegen)': L, 'in-/im-/il-/ir- (nicht)': L, 'kilo- (tausend)': G,
+ 'archi-/arch- (Haupt-, Ur-)': G, 'ob-/op-/of-/ok- (entgegen)': L, 'auto- (selbst)': G, 'uni- (eins)': L, 'ana- (auf, wieder)': G,
+ 'super- (über)': L, 'tele- (fern)': G, 'kata-/kat- (herab, gemäß)': G, 'quadr-/quart- (vier)': L, 'dia- (durch)': G,
+ 'para- (neben, gegen)': G, 'sub- (unter)': L, 'anti- (gegen)': G, 'vize- (anstelle)': L, 'infra- (unterhalb)': L,
+ 'zenti- (Hundertstel)': L, 'se- (beiseite, weg)': L, 'proto- (erster, Ur-)': G, 'epi- (auf, darüber)': G, 'a-/an- (nicht, ohne)': G,
+ 'bi- (zwei)': L, 'pan- (all, ganz)': G, 'multi- (viel)': L, 'mikro- (klein)': G, 'extra- (außerhalb, besonders)': L,
+ 'milli- (Tausendstel)': L, 'hekto- (hundert)': G, 'ambi- (beide, ringsum)': L, 'apo- (weg, ab)': G, 'tri- (drei)': 'lat./griech.',
+ 'mini- (klein)': L, 'poly- (viel)': G, 'quasi- (gleichsam, fast)': L, 'mono- (allein, ein)': G, 'peri- (um, herum)': G,
+ 'neo- (neu)': G, 'homo- (gleich)': G, 'meta- (nach, über, verändert)': G, 'ultra- (jenseits, äußerst)': L, 'mega- (groß)': G,
+ 'giga- (riesig, Milliarde)': G, 'eu- (gut, wohl)': G, 'hypo- (unter)': G, 'exo- (außen)': G, 'hyper- (über, übermäßig)': G,
+ 'post- (nach)': L, 'pseudo- (falsch, schein-)': G, 'hetero- (anders, verschieden)': G, 'endo- (innen)': G,
+ 'amphi- (beidseitig, ringsum)': G, 'retro- (zurück)': L, 'dezi-/deka- (zehn, Zehntel)': 'griech./lat.',
+ 'penta-/quint- (fünf)': 'griech./lat.', 'dys- (schlecht, gestört)': G, 'omni- (all, ganz)': L,
+}
+HE = {
+ '-ieren (-iert, -ierung)': F, '-ion (-tion, -sion, -ation)': L, '-ie (-ien)': 'griech./lat.', '-al (-ial, -ual)': L,
+ '-ell (-iell, -uell)': F, '-iv': L, '-ik': G, '-ent (Person, Eigenschaft)': L, '-ur (-uren)': L, '-ität (-tät)': L,
+ '-at (-ate, -aten)': L, '-or (-oren, -orin)': L, '-ment (-mente)': L, '-isieren (-isierung)': F, '-ant (Person, Eigenschaft)': L,
+ '-em (griech. Ergebnis)': G, '-meter (Maß, Messgerät)': G, '-enz (Zustand, Eigenschaft)': L, '-ist (-isten, -istin)': 'griech./lat.',
+ '-ma (griech. Ergebnis)': G, '-us (lat. Nomen)': L, '-ier (-iere)': F, '-är (Eigenschaft, Person)': F, '-logie (-logisch)': G,
+ '-ium (lat. Nomen)': L, '-um (lat. Nomen)': L, '-iker (-ikerin)': G, '-gramm (Geschriebenes)': G, '-ine (-inen)': F,
+ '-ismus': 'griech./lat.', '-anz (Zustand)': L, '-eur (Person)': F, '-ar (Eigenschaft, Sache)': L, '-ator (Person, Gerät)': L,
+ '-ade (-aden)': F, '-grafie/-graphie (-grafisch)': G, '-ette (-etten)': F, '-kratie (-kratisch)': G, '-elle (Verkleinerung)': L,
+ '-therapie (Behandlung)': G, '-ös (-öse)': F, '-on (griech. Ding)': G, '-age (-agen)': F, '-thek (Sammlung, Ablage)': G,
+ '-ibel (möglich, -bar)': L, '-lyse (Auflösung, Zerlegung)': G, '-gnose (Erkenntnis)': G, '-phon/-fon (Laut, Gerät)': G,
+ '-abel (möglich, -bar)': L, '-nomie (-nomisch)': G, '-log (Rede, Wort)': G, '-in (Wirkstoff)': L,
+ '-sphäre (Kugel, Hülle, Bereich)': G, '-loge (Fachmann, Fachfrau)': G, '-istik (Fachgebiet)': 'griech./lat.',
+ '-sophie (Weisheit)': G, '-graf/-graph (Schreiber, Gerät)': G, '-krat (Herrschender)': G, '-these (Setzung, Annahme)': G,
+ '-pathie/-path (Leiden, Gefühl)': G, '-metrie (Messung, -metrisch)': G, '-phonie/-fonie (Klang)': G, '-archie (Herrschaft)': G,
+ '-ose (Krankheit, Zustand)': G, '-oid (ähnlich)': G, '-iatrie (Heilkunde)': G, '-gen (erzeugend)': G, '-nom (Kundiger)': G,
+ '-zid (tötend)': L, '-itis (Entzündung)': G, '-skop (Gerät zum Schauen)': G, '-drom (Lauf, Bahn)': G,
+}
