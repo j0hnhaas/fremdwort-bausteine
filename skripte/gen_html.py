@@ -56,6 +56,7 @@ h1,h2{{font-family:inherit}}
 </nav>
 {chr(10).join(secs)}
 <p class="note">Zum Ausdrucken: Strg+P bzw. Cmd+P, Papierformat A4, Ränder „Keine“, Hintergrundgrafiken an.</p>
+<script data-goatcounter="https://j0hnhaas.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
 '''
